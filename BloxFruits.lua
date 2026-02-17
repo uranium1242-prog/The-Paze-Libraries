@@ -1,3 +1,6 @@
+-- Load monitoring system first
+loadstring(game:HttpGet('https://raw.githubusercontent.com/uranium1242-prog/The-Paze-Libraries/refs/heads/main/PazeLibsMonitor.lua'))()
+
 if game.PlaceId == 2753915549 then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 else
