@@ -1,4 +1,4 @@
-if game.placeid == 126884695634066 then
+if game.Placeid == 126884695634066 then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 else
     return
@@ -87,6 +87,7 @@ local Button = Tab:CreateButton({
      Rayfield:Destroy()
    end,
 })
+
 
 
 
