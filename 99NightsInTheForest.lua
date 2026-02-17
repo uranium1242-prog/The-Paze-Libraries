@@ -1,34 +1,29 @@
-if game.placeid == 79546208627805 then
+if game.PlaceId == 79546208627805 then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 else
     return
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "BloxFruits Library",
+   Name = "99 Nights In the forrest Library",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading scripts",
    LoadingSubtitle = "by Pingus Productions",
    ShowText = "PazeLibs", -- for mobile users to unhide Rayfield, change if you'd like
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
-
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from emitting warnings when the script has a version mismatch with the interface.
-
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "Big Hub"
    },
-
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
       Invite = "noinvitelink", -- The Discord invite code, do not include Discord.gg/. E.g. Discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the Discord every time they load it up
    },
-
    KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Untitled",
@@ -42,7 +37,6 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("Scripts", nil) -- Title, Image
-
 local Section = Tab:CreateSection("Scripts")
 Section:Set("Scripts")
 
@@ -87,6 +81,3 @@ local Button = Tab:CreateButton({
      Rayfield:Destroy()
    end,
 })
-
-
-
