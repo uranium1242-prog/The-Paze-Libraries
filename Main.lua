@@ -11,7 +11,7 @@ local Window = Rayfield:CreateWindow({
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
 
    DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false -- Prevents Rayfield from emitting warnings when the script has a version mismatch with the interface.
+   DisableBuildWarnings = false, -- Fixed: added comma here
 
    ConfigurationSaving = {
       Enabled = true,
@@ -60,19 +60,5 @@ local Button = Tab:CreateButton({
    Name = "99 Nights In The Forest",
    Callback = function()
      loadstring(game:HttpGet('https://raw.githubusercontent.com/uranium1242-prog/The-Paze-Libraries/refs/heads/main/99NightsInTheForest.lua'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Unload Library",
-   Callback = function()
-     Rayfield:Destroy()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Reload Roblox (resets the game)",
-   Callback = function()
-     game.Players:WaitForChild("LocalPlayer"):Kick("Rejoin")
    end,
 })
