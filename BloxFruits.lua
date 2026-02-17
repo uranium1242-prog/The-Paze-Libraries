@@ -1,4 +1,4 @@
-if game.placeid == 2753915549 then
+if game.PlaceId == 2753915549 then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 else
     return
@@ -47,13 +47,6 @@ local Section = Tab:CreateSection("Scripts")
 Section:Set("Scripts")
 
 local Button = Tab:CreateButton({
-   Name = "Redz Hub loader",
-   Callback = function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
    Name = "Alchemy Hub loader",
    Callback = function()
      loadstring(game:HttpGet("https://getalchemy.net/r"))()
@@ -87,6 +80,3 @@ local Button = Tab:CreateButton({
      Rayfield:Destroy()
    end,
 })
-
-
-
