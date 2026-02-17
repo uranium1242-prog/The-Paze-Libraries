@@ -1,83 +1,59 @@
-if game.Placeid == 126884695634066 then
+-- Load monitoring system first
+loadstring(game:HttpGet('https://raw.githubusercontent.com/uranium1242-prog/The-Paze-Libraries/refs/heads/main/PazeLibsMonitor.lua'))()
+
+if game.PlaceId == 126884695634066 then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 else
     return
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "Grow a Garden Library",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Name = "Grow A Garden Library",
+   Icon = 0,
    LoadingTitle = "Loading scripts",
    LoadingSubtitle = "by Pingus Productions",
-   ShowText = "PazeLibs", -- for mobile users to unhide Rayfield, change if you'd like
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
-   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
-
+   ShowText = "PazeLibs",
+   Theme = "Default",
+   ToggleUIKeybind = "K",
    DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from emitting warnings when the script has a version mismatch with the interface.
-
+   DisableBuildWarnings = false,
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
+      FolderName = nil,
       FileName = "Big Hub"
    },
-
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include Discord.gg/. E.g. Discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the Discord every time they load it up
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
    },
-
-   KeySystem = false, -- Set this to true to use our key system
+   KeySystem = false,
    KeySettings = {
       Title = "Untitled",
       Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique, as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that the system will accept, can be RAW file links (pastebin, github, etc.) or simple strings ("hello", "key22")
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"Hello"}
    }
 })
 
-local Tab = Window:CreateTab("Scripts", nil) -- Title, Image
-
+local Tab = Window:CreateTab("Scripts", nil)
 local Section = Tab:CreateSection("Scripts")
 Section:Set("Scripts")
 
 local Button = Tab:CreateButton({
-   Name = "Black Hub loader",
-   Callback = function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Alchemy Hub loader",
-   Callback = function()
-     loadstring(game:HttpGet("https://getalchemy.net/r"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
    Name = "Speed Hub X loader",
    Callback = function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))();
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed Hub X.lua", true))()
    end,
 })
 
 local Button = Tab:CreateButton({
-   Name = "Lumin Hub loader",
+   Name = "Depthso AutoFarm",
    Callback = function()
-     loadstring(game:HttpGet("https://pastebin.com/raw/DSzWXEgx", true))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Dark Spawner loader",
-   Callback = function()
-     loadstring(game:HttpGet("https://pastefy.app/SC4qoDAW/raw"))()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Grow-a-Garden/refs/heads/main/autofarm.lua'))()
    end,
 })
 
@@ -87,8 +63,3 @@ local Button = Tab:CreateButton({
      Rayfield:Destroy()
    end,
 })
-
-
-
-
-
