@@ -5,7 +5,7 @@ else
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "BloxFruits Library",
+   Name = "Grow a Garden Library",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading scripts",
    LoadingSubtitle = "by Pingus Productions",
@@ -87,6 +87,7 @@ local Button = Tab:CreateButton({
      Rayfield:Destroy()
    end,
 })
+
 
 
 
