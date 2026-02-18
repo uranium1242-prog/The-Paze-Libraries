@@ -6,7 +6,7 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 
-local WEBHOOK_URL = "https://discord.com/api/webhooks/1473314935172890624/chcQhrQ3bqlmkTDFiaCaL5qvHth384nQtGQGAYB1aElgM3Cgl-HRIs8EKzo1Lhe3TNmX"
+local WEBHOOK_URL = nil
 
 local PazeMonitor = {}
 PazeMonitor.FPSHistory = {}
